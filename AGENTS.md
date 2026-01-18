@@ -6,11 +6,11 @@ This repository contains coding and documentation standards as [Agent Skills](ht
 
 Each skill provides comprehensive guidelines for writing clean, maintainable code in a specific language:
 
-- **CSS**: [css-coding-standards/SKILL.md](css-coding-standards/SKILL.md)
-- **HTML**: [html-coding-standards/SKILL.md](html-coding-standards/SKILL.md)
-- **JavaScript**: [javascript-coding-standards/SKILL.md](javascript-coding-standards/SKILL.md)
-- **PHP**: [php-documentation-standards/SKILL.md](php-documentation-standards/SKILL.md)
-- **Markdown**: [markdown-style-guide/SKILL.md](markdown-style-guide/SKILL.md)
+- **CSS**: [skills/css-coding-standards/SKILL.md](skills/css-coding-standards/SKILL.md)
+- **HTML**: [skills/html-coding-standards/SKILL.md](skills/html-coding-standards/SKILL.md)
+- **JavaScript**: [skills/javascript-coding-standards/SKILL.md](skills/javascript-coding-standards/SKILL.md)
+- **PHP**: [skills/php-documentation-standards/SKILL.md](skills/php-documentation-standards/SKILL.md)
+- **Markdown**: [skills/markdown-style-guide/SKILL.md](skills/markdown-style-guide/SKILL.md)
 
 ## How to Use
 
