@@ -1,17 +1,30 @@
-# Agent Standards
+# Agent Skills
 
-Guidelines for generating code and docs. Each language file summarizes the required rules. Follow the language guide plus any project-specific conventions.
+This repository contains coding and documentation standards as [Agent Skills](https://agentskills.io) - a simple, open format for giving agents new capabilities and expertise.
 
-## How to use
+## Available Skills
 
-- Pick the relevant language guide below and follow all rules when generating code or docs.
-- If project lint/format settings differ, comply with those while keeping these standards.
-- Add short comments only for non-obvious logic or required documentation per guide.
+Each skill provides comprehensive guidelines for writing clean, maintainable code in a specific language:
 
-## Language guides
+- **CSS**: [css-coding-standards/SKILL.md](css-coding-standards/SKILL.md)
+- **HTML**: [html-coding-standards/SKILL.md](html-coding-standards/SKILL.md)
+- **JavaScript**: [javascript-coding-standards/SKILL.md](javascript-coding-standards/SKILL.md)
+- **PHP**: [php-documentation-standards/SKILL.md](php-documentation-standards/SKILL.md)
+- **Markdown**: [markdown-style-guide/SKILL.md](markdown-style-guide/SKILL.md)
 
-- CSS: `agent-docs/css.md`
-- HTML: `agent-docs/html.md`
-- JavaScript: `agent-docs/javascript.md`
-- PHP: `agent-docs/php.md`
-- Markdown: `agent-docs/markdown.md`
+## How to Use
+
+1. **For agents**: Discover and use these skills when generating or reviewing code
+2. **For developers**: Reference these guides to understand coding standards
+3. **For projects**: Follow the language guide plus any project-specific conventions
+4. **For documentation**: Add comments only for non-obvious logic as specified in each guide
+
+## About Agent Skills
+
+Agent Skills are folders of instructions that agents can discover and use to perform better at specific tasks. Each skill contains:
+
+- **SKILL.md**: Main instruction file with YAML frontmatter and detailed guidelines
+- Structured, consistent format for agent discovery
+- Language-specific best practices and requirements
+
+Learn more at [agentskills.io](https://agentskills.io)
