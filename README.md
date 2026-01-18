@@ -9,7 +9,7 @@ Coding and documentation standards for WordPress development, packaged as [Agent
 This repository contains AI-facing coding standards adapted from WordPress and related guides, structured as Agent Skills:
 
 - **[AGENTS.md](AGENTS.md)**: Main entry point with links to all available skills
-- **Skill folders**: Individual skills for each language, following the Agent Skills specification
+- **skills/**: Directory containing all skill folders, following the Agent Skills specification
   - `css-coding-standards/` - CSS formatting, naming, and architecture guidelines
   - `html-coding-standards/` - HTML structure, accessibility, and semantic markup
   - `javascript-coding-standards/` - JavaScript style, documentation, and best practices
