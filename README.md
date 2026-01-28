@@ -1,52 +1,66 @@
-# Agents WordPress
+﻿# Agents WordPress
 
-Coding and documentation standards for WordPress development, packaged as [Agent Skills](https://agentskills.io).
+Coding and documentation standards for WordPress development, organized for both humans and AI agents.
 
-**Author:** Dax Castellon — daxcastellon@pm.me
+Author: Dax Castellon - daxcastellon@pm.me
 
-## What's Here
+## What This Repo Contains
 
-This repository contains AI-facing coding standards adapted from WordPress and related guides, structured as Agent Skills:
+This repo provides a token-efficient, human-readable ruleset for working on WordPress code.
+The canonical rules live in two files; everything else points back to them.
 
-- **[AGENTS.md](AGENTS.md)**: Main entry point with links to all available skills
-- **skills/**: Directory containing all skill folders, following the Agent Skills specification
-  - `css-coding-standards/` - CSS formatting, naming, and architecture guidelines
-  - `html-coding-standards/` - HTML structure, accessibility, and semantic markup
-  - `javascript-coding-standards/` - JavaScript style, documentation, and best practices
-  - `php-documentation-standards/` - PHPDoc standards and inline commenting
-  - `markdown-style-guide/` - Markdown formatting and structure conventions
-- **archive/**: Original source standards used to derive the skills
+Key files and folders:
 
-## How to Use
+- `agent-guidelines/AGENTS.md` - entry point for agents and humans
+- `agent-guidelines/SECURITY_RULES.md` - authoritative security rules
+- `agent-guidelines/CODING_RULES.md` - authoritative coding style rules
+- `agent-guidelines/SKILLS_INDEX.md` - list of scoped skills
+- `agent-guidelines/SKILLS/` - task-specific skills (each file is short and points to the canonical rules)
+- `agent-guidelines/CI_CHECKS.md` - what CI enforces
 
-### For AI Agents
+## How To Use (Humans)
 
-Agents can discover and use these skills automatically. Each skill folder contains a `SKILL.md` file with:
-- YAML frontmatter describing the skill's purpose
-- Comprehensive guidelines for the specific language
-- Examples and best practices
+1. Read `agent-guidelines/AGENTS.md` first.
+2. For security rules, open `agent-guidelines/SECURITY_RULES.md`.
+3. For style rules, open `agent-guidelines/CODING_RULES.md`.
+4. If you need task-specific guidance, open `agent-guidelines/SKILLS_INDEX.md` and choose one skill.
 
-### For Developers
+## How To Use (AI Agents)
 
-1. Start with [AGENTS.md](AGENTS.md) to see all available skills
-2. Navigate to the specific skill folder for detailed guidelines
-3. Follow the standards when writing code or documentation
-4. Ensure consistency with project linters and formatters
+Load order (lowest token usage):
+1. `agent-guidelines/AGENTS.md`
+2. `agent-guidelines/SECURITY_RULES.md` and/or `agent-guidelines/CODING_RULES.md`
+3. One relevant file from `agent-guidelines/SKILLS/`
 
-### For Projects
+Notes:
+- Skills are intentionally short and do not repeat the canonical rules.
+- When reporting issues, reference SR-* or CR-* rule IDs from the canonical files.
 
-- Reference these skills in your project documentation
-- Customize or extend skills for project-specific needs
-- Keep skills updated as standards evolve
+### Example instructions for an AI agent
 
-## About Agent Skills
+Example 1 - security-sensitive backend change:
+"Read `agent-guidelines/AGENTS.md`, then `agent-guidelines/SECURITY_RULES.md`, and use the skill
+`agent-guidelines/SKILLS/wordpress-backend.md` before editing code. Follow security rules strictly
+and reference SR-* IDs in any findings."
 
-[Agent Skills](https://agentskills.io) are a simple, open format for giving agents new capabilities and expertise. Skills are folders of instructions, scripts, and resources that agents can discover and use to perform better at specific tasks.
+Example 2 - CSS cleanup:
+"Use `agent-guidelines/AGENTS.md`, then `agent-guidelines/CODING_RULES.md`, and apply the skill
+`agent-guidelines/SKILLS/css-style.md` for any CSS changes. Keep changes minimal and follow the
+WordPress style rules."
 
-**Key features**:
-- Write once, use everywhere
-- Standardized format for agent discovery
-- Interoperable across different agent platforms
-- Open specification maintained by Anthropic
+Example 3 - REST endpoint review:
+"Open `agent-guidelines/AGENTS.md`, then `agent-guidelines/SECURITY_RULES.md`, and the skill
+`agent-guidelines/SKILLS/wordpress-rest-api.md`. Review the endpoint for security issues and cite
+SR-* rule IDs in the report."
 
-Learn more at [agentskills.io](https://agentskills.io) or view the [specification](https://agentskills.io/specification).
+## Why This Structure
+
+- Single source of truth for rules (reduces drift)
+- Minimal duplication (reduces agent token usage)
+- Clear navigation for humans
+
+## Maintenance
+
+- Update rules only in `SECURITY_RULES.md` and `CODING_RULES.md`.
+- Keep skills short; they should point back to the canonical rules.
+- If you add a skill, list it in `agent-guidelines/SKILLS_INDEX.md`.
