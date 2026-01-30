@@ -20,6 +20,7 @@ Defaults (apply unless a skill says otherwise):
 - Security and refusals follow SECURITY_RULES.md.
 - Coding style follows CODING_RULES.md.
 - If unsure, refuse and ask for missing context.
+- Responses MUST be concise to minimize token consumption.
 
 ---
 
