@@ -32,6 +32,7 @@ Each rule is normative. SKILLS MUST reference these IDs.
 - **SR-GEN-001 (Untrusted by default):** All external input MUST be treated as untrusted (including user input, third-party APIs, and data from the database unless verified). citeturn0search5
 - **SR-GEN-002 (Defense in depth):** Validation, sanitization, escaping, authorization, and CSRF protection are independent controls; passing one MUST NOT imply the others.
 - **SR-GEN-003 (Prefer WP APIs):** WordPress core APIs SHOULD be used where they exist, rather than ad-hoc equivalents.
+- **SR-GEN-004 (Plugin hardening index):** All plugin folders MUST contain an empty `index.php`; if missing, create it with `<?php // Silence is golden`.
 
 ---
 
