@@ -49,7 +49,8 @@ and documentation (non-security). These rules enforce consistency with WordPress
 - **CR-HTML-020 (Lowercase):** Element and attribute names MUST be lowercase.
 - **CR-HTML-021 (Quote attributes):** Attribute values SHOULD be quoted (preferably double quotes).
 - **CR-HTML-022 (Boolean attributes):** Boolean attributes SHOULD omit values (e.g. `disabled`, not `disabled="disabled"`). citeturn1search0
-- **CR-HTML-030 (Indentation):** Nested structure MUST be indented with tabs to reflect hierarchy. citeturn1search0
+- **CR-HTML-030 (Indentation):** Nested structure MUST be indented with tabs to reflect hierarchy.
+- **CR-HTML-040 (Minimal DOM):** Code MUST prioritize minimal DOM rendering. Create as few DOM elements as possible to reduce rendering overhead and improve performance.
 
 ---
 
@@ -59,7 +60,8 @@ and documentation (non-security). These rules enforce consistency with WordPress
 - **CR-CSS-002 (Blank lines):** Add **two blank lines** between sections and **one blank line** between blocks within a section. citeturn0search7
 - **CR-CSS-003 (One selector per line):** Each selector MUST be on its own line, ending in `,` or `{`. citeturn0search7
 - **CR-CSS-004 (One declaration per line):** Each property/value MUST be on its own line with one tab indentation and a trailing semicolon. citeturn0search7
-- **CR-CSS-005 (Brace alignment):** Closing brace `}` MUST be flush left at the same indentation as the selector line. citeturn0search7
+- **CR-CSS-005 (Brace alignment):** Closing brace `}` MUST be flush left at the same indentation as the selector line.
+- **CR-CSS-010 (No inline CSS):** Inline CSS via `style` attributes MUST NOT be used. All styles MUST be defined in external CSS files.
 
 ---
 
@@ -69,7 +71,8 @@ and documentation (non-security). These rules enforce consistency with WordPress
 - **CR-JS-002 (No trailing whitespace):** No whitespace at end of line or blank lines. citeturn0search2
 - **CR-JS-003 (Line length):** Lines SHOULD be ≤ 80 characters and MUST NOT exceed 100 (tabs count as 4 spaces). citeturn0search2
 - **CR-JS-004 (Braces required):** `if/else/for/while/try` blocks MUST always use braces and MUST be multi-line. citeturn0search2
-- **CR-JS-005 (Operators spacing):** Follow WP whitespace rules; punctuation spacing MUST follow the standard (no extra spaces before commas/semicolons). citeturn0search2
+- **CR-JS-005 (Operators spacing):** Follow WP whitespace rules; punctuation spacing MUST follow the standard (no extra spaces before commas/semicolons).
+- **CR-JS-010 (No jQuery):** jQuery MUST NOT be used. Only modern vanilla JavaScript (ES6+) is allowed for scripts.
 
 ---
 
